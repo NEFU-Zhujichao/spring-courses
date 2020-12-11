@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.example.pojo.Address" name="address2">
+        <property name="address" value="哈尔滨"/>
+    </bean>
+    <bean id="student" class="com.example.pojo.Student">
+        <property name="name" value="朱继超"/>
+        <property name="address" ref="address"/>
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>三国演义</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>打篮球</value>
+                <value>敲代码</value>
+                <value>读书</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="学生卡" value="2018214201"/>
+                <entry key="身份证" value="1522005630445822021"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>CF</value>
+                <value>DNF</value>
+            </set>
+        </property>
+        <property name="wife">
+            <null/>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="url">https:3306?mybatis.user</prop>
+                <prop key="driver">mysqlDriver</prop>
+                <prop key="user">root</prop>
+                <prop key="password">root</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
